@@ -71,6 +71,7 @@ export default class Plugin {
         { name: 'FunctionName', value: config.name },
         { name: 'Resource', value: `${config.name}:${alias}` },
       ],
+      treatMissing: 'breach'
     }
 
     return {

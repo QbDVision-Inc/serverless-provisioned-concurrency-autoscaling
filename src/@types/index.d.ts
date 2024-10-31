@@ -33,6 +33,18 @@ export interface CustomMetricConfig {
   namespace?: string
   statistic?: string
   unit?: string
+  /**
+   * For each alarm, you can specify CloudWatch to treat missing data points as any of the following:
+   *
+   * notBreaching – Missing data points are treated as "good" and within the threshold
+   *
+   * breaching – Missing data points are treated as "bad" and breaching the threshold
+   *
+   * ignore – The current alarm state is maintained
+   *
+   * missing – If all data points in the alarm evaluation range are missing, the alarm transitions to INSUFFICIENT_DATA.
+   */
+  treatMissing?: string
 }
 
 export interface Dimension {
